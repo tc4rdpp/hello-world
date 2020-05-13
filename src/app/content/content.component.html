@@ -1,0 +1,20 @@
+<h1 class="mat-h1 content-search">Content Search</h1>
+<mat-form-field class="search-input" floatLabel="never">
+  <mat-icon matPrefix>search</mat-icon>
+  <input matInput type="search" aria-label="Search" placeholder="Search..." [formControl]="formCtrl">
+  <button matSuffix mat-button mat-icon-button type="button" aria-label="Clear"
+    [style.visibility]="search ? 'visible' : 'hidden'" (click)="clear()" color="accent">
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>
+
+<div *ngIf="search">
+  <h2 *ngIf="results.length==0" class="mat-h2 no-results">No results</h2>
+  <mat-grid-list *ngIf="results.length>0" class="result-grid" cols="4" rowHeight="1:1.2">
+    <mat-grid-tile *ngFor="let res of results">
+      <app-result-card class="result-card" [title]="res.contentType" [subtitle]="res.displayValues.thumbnail"
+        [content]="res.displayValues.name" [contentId]="res.id">
+      </app-result-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

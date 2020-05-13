@@ -1,0 +1,38 @@
+<section fxLayout="row wrap" fxLayoutAlign="center center">
+  <mat-card fxFlex="500px" fxFlex.xs="100%">
+    <mat-card-title>Content Details</mat-card-title>
+    <mat-card-content *ngIf="contentDetails">
+      <div fxLayout="column wrap" fxLayoutGap="40px">
+        <div fxLayout="row wrap" fxFlex>
+          <div fxFlex><strong>Id:</strong></div>
+          <div fxFlex>{{contentDetails.id}}</div>
+        </div>
+        <div fxLayout="row wrap" fxFlex>
+          <div fxFlex><strong>Content Schema Id:</strong></div>
+          <div fxFlex>{{contentDetails.contentSchemaId || 'n/a'}}</div>
+        </div>
+        <div fxLayout="row wrap" fxFlex>
+          <div fxFlex><strong>Content Type:</strong></div>
+          <div fxFlex>{{contentDetails.contentType || 'n/a'}}</div>
+        </div>
+        <div fxLayout="row wrap" fxFlex>
+          <div fxFlex><strong>Layer Schema Ids:</strong></div>
+          <mat-list *ngIf="contentDetails.layerSchemaIds && contentDetails.layerSchemaIds.length>0" role="list" fxFlex>
+            <mat-list-item *ngFor="let lsId of contentDetails.layerSchemaIds" role="listitem">{{lsId}}
+            </mat-list-item>
+          </mat-list>
+          <div *ngIf="contentDetails.layerSchemaIds == null || contentDetails.layerSchemaIds.length === 0" fxFlex>n/a
+          </div>
+        </div>
+        <div fxLayout="row wrap" fxFlex>
+          <div fxFlex><strong>Outputs:</strong></div>
+          <div fxFlex>{{contentDetails.outputs || 'n/a'}}</div>
+        </div>
+        <div fxLayout="row wrap" fxFlex>
+          <div fxFlex><strong>File Size In Bytes:</strong></div>
+          <div fxFlex>{{contentDetails.fileSizeInBytes || 'n/a'}}</div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</section>

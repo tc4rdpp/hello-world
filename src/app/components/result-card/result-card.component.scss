@@ -1,0 +1,35 @@
+mat-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 90%;
+  min-width: 90%;
+}
+
+mat-card-header {
+  flex-shrink: 0;
+}
+
+mat-card-content {
+  flex-grow: 1;
+  overflow: auto;
+  align-self: center;
+}
+
+.card-avatar-image {
+  background-image: url('https://previews.123rf.com/images/alexwhite/alexwhite1304/alexwhite130405050/19253384-document-red-circle-web-glossy-icon.jpg');
+  background-size: cover;
+}
+
+.card-content-image {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.card-content-text {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 15px;
+}

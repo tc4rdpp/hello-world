@@ -1,0 +1,30 @@
+.content-search {
+  color: #31352f;
+  font-size: 35px;
+  text-shadow: 2px 3px 5px grey;
+  text-transform: uppercase;
+  margin: 50px 25px;
+}
+
+.search-input {
+  margin: 0 25px;
+}
+.result-grid {
+  width: 100%;
+}
+.result-card {
+  min-height: 95%;
+  min-width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.no-results {
+  margin: 0 25px;
+}
