@@ -53,7 +53,7 @@ import { MaterialElevationDirective } from './directives/material-elevation.dire
       provide: PICTUREPARK_CONFIGURATION,
       useValue: {
         apiServer: 'https://api.01.qa-picturepark.com',
-        customerAlias: 'localtest',
+        customerAlias: 'demo',
         accessToken:
           '2fa4151d30d5810b16e55b34b5fc0e9b166f5e06b40f9de6473eb657f6dafa1b'
       } as PictureparkConfiguration
